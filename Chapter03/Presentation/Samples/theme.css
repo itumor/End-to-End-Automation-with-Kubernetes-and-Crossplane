@@ -1,0 +1,50 @@
+/* @theme your-theme */
+
+@import 'gaia';
+
+:root {
+  width: 1280px;
+  height: 960px;
+  font-size: 40px;
+  padding: 1rem;
+}
+
+
+
+h1 {
+  font-size: 1.5rem;
+  color: #09c;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h1 {
+  color: blue;
+  
+}
+
+h2 {
+  color: blue;
+  
+}
+section {
+  padding: 50px;
+}
+
+header,
+footer {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 20px;
+}
+
+header {
+  top: 30px;
+}
+
+footer {
+  bottom: 30px;
+}
