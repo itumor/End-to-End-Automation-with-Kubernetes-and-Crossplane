@@ -64,8 +64,6 @@ Kubernetes works by using a master-slave architecture to manage containerized ap
 
 ![bg ](https://images.ctfassets.net/w1bd7cq683kz/5Ex6830HzBPU5h8Ou8xQAB/2c948105fc10094348203bec6c1eab04/Kubernetes_20architecture_20diagram.png)
 
-
-
 ---
 # What is GitOps?  
 - GitOps is a way of implementing Continuous Deployment for cloud native applications, it uses Git as a source of truth for declarative infrastructure and application code.
@@ -77,39 +75,65 @@ Kubernetes works by using a master-slave architecture to manage containerized ap
 ![bg left:10% 80%](https://www.almtoolbox.com/blog/wp-content/uploads//2022/03/gitops.png)
 
 ---
-# Why use Kubernetes?
+# Why use Gitops?
 
-- Scalability
+- Automation and Efficiency
 
-- High availability 
+- Collaboration and traceability
 
-- Self-healing 
+- Security 
 
-- Load balancing
+- Scalability 
 
 - Flexibility 
 
-- Automated rollouts and rollbacks
+- Reliability
 
-- Reduced operational overhead 
+- Speed 
 
-- Large and active community
+- Cost-effective
 
 ![bg left:10% 80%](https://www.almtoolbox.com/blog/wp-content/uploads//2022/03/gitops.png)
 
 ----
-# How Kubernetes works?
-Kubernetes works by using a master-slave architecture to manage containerized applications:
+# How GitOps Works?
+- GitOps uses a Git repository to store the desired state of the system and a pipeline to continuously monitor and update the system to match that desired state.
 
-- The developer uses kubectl command line tool to interact with the Kubernetes master node, which controls worker nodes.
-- The worker nodes run the containerized application and communicate with the master node to ensure desired state is met.
-- Kubernetes automatically distributes incoming traffic, monitor the running containers, and performs self-healing if needed.
-- The developer can scale and update the application through the Kubernetes API server.
+- The pipeline includes automated tests and security checks, and can monitor the cluster for drift and automatically correct it.
+
+- GitOps facilitates collaboration and traceability, and allows for easy rollbacks by using version control in the Git repository.
 
 ---
+![bg ](https://www.cncf.io/wp-content/uploads/2022/08/image1-31.png)
 
-----
+---
+# What is Crossplane?
+Crossplane is an open-source multi-cloud control plane that enables users to manage infrastructure as code and automate provisioning, scaling, and management of cloud resources. It provides a common way to provision and manage resources across different cloud providers and can be integrated with Kubernetes.
 
+---
+# Why use Crossplane?
+
+- Crossplane allows you to manage cloud resources using the same tools and workflows that you use to manage your Kubernetes clusters.
+
+- Crossplane enables users to provision and manage cloud resources from different providers using a common set of APIs and tools, reducing the complexity of multi-cloud deployments.
+
+- Crossplane enables users to define, compose, and manage reusable infrastructure as code, allowing for more efficient and consistent deployments.
+
+---
+# How Crossplane works?
+- Crossplane uses a Kubernetes-native API to provision and manage cloud resources, making it easy to integrate with existing Kubernetes workflows and tools.
+
+- Crossplane uses a Custom Resource Definition (CRD) to define the desired state of cloud resources, which can be versioned and tracked in Git.
+
+
+---
+# How Crossplane works?
+- Crossplane uses controllers that watch for changes to the CRDs and automatically provision and manage the resources to match the desired state.
+
+- Crossplane can be integrated with other Kubernetes tools such as Helm, Kustomize, and Kubernetes Operators to provide a powerful and flexible multi-cloud infrastructure management solution.
+---
+
+---
 
 
 
