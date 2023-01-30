@@ -20,32 +20,6 @@ size: 16:9
 - Experience: 13 years of experience in the computer software industry Worked with 5 companies 22 projects
 
 ---
-
-```yaml
-apiVersion: world/23
-kind: Human
-metadata:
-  name: Ebrahim-Ramadan
-  labels:
-    job: Cloud-Architect
-    company: Accenture-Baltics
-spec:
-  containers:
-  - name: me
-    image: Ebrahim:35
-    env:
-    - name: Certifications
-      value: "CKA CKAD KCNA SAA"
-    - name: Core-Skills
-      value: "AWS Kubernetes Docker Istio.io GitOps CI/CD Crossplane"
-    - name: Experience
-      value: "13 years"
-    - name: Companies
-      value: "5"
-    - name: projects 
-      value: "22"
-```
----
 # Introduction
 
 - What Why How Kubernetes?
