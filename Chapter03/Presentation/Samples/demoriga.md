@@ -157,7 +157,7 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 
 ---
 #
-![bg fit](https://freecontent.manning.com/wp-content/uploads/defining-infrastructure-declaratively-with-crossplane_01.png)
+![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/crossplane1.png)
 
 ---
 # Crossplane Concepts
