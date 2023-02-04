@@ -22,6 +22,7 @@ size: 16:9
   - Kubernetes
   - Argo CD
   - Crossplane
+- Solution Diagram 
 - What Why How Crossplane? 
 - Crossplane Concepts.
 - Demo 
@@ -66,6 +67,11 @@ By combining these tools, it becomes possible to achieve true GitOps for both in
 Crossplane is an open-source multi-cloud control plane that enables users to manage infrastructure as code and automate provisioning, scaling, and management of cloud resources. It provides a common way to provision and manage resources across different cloud providers and can be integrated with Kubernetes.
 
 ![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
+
+---
+# Solution Diagram  
+
+![bg contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Solution.png)
 
 ---
 # Why use Crossplane?
