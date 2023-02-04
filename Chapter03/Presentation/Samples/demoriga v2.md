@@ -98,6 +98,7 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 #
 ![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/crossplane1.png)
 
+
 ---
 # Crossplane Concepts
 - Providers
@@ -113,7 +114,7 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 # Providers
 Providers bundle a set of Managed Resources and controllers to allow Crossplane to provision and manage the respective infrastructure resources.
 
-![bg right fit](https://blog.codecentric.de/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Foutput%3Dformat%3Awebp%2FWAtrV4JRB64mnqOFNQKA&w=3840&q=75)
+![bg right:60% 80% fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Providers.png?raw=true)
 
 ---
 ```yaml
