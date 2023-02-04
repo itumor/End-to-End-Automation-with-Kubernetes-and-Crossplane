@@ -10,18 +10,8 @@ size: 16:9
 ---
 # GitOpsifying Cloud Infra with Crossplane
 ---
-# About Me
-- Ebrahim Ramadan Cloud Architect at Accenture Baltics
-
-- Certifications: CKA CKAD KCNA SAA
-
-- Core Skills: AWS Kubernetes Docker Istio.io GitOps CI/CD Crossplane
-
-- Experience: 13 years of experience in the computer software industry Worked with 5 companies 22 projects
-
----
 ##### About Me
-![bg  contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/me.png)
+![bg contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/me.png)
 
 ---
 
@@ -29,16 +19,13 @@ size: 16:9
 
 - Problem
 - Solution
-- Kubernetes
-- Argo CD
-- Crossplane
+  - Kubernetes
+  - Argo CD
+  - Crossplane
 - What Why How Crossplane? 
 - Crossplane Concepts.
 - Demo 
 - Q & A 
-- Thanks
-
-
 ---
 
 # Problem
@@ -69,7 +56,11 @@ Kubernetes provides a platform for deploying, scaling, and managing containerize
 ![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
 
 ---
-- By combining these tools, it becomes possible to achieve true GitOps for both infrastructure and applications, reducing complexity and minimizing the need to use multiple tools and languages.
+By combining these tools, it becomes possible to achieve true GitOps for both infrastructure and applications, reducing complexity and minimizing the need to use multiple tools and languages.
+![bg right:50% 70%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
+![bg right:50% 70%](https://cncf-branding.netlify.app/img/projects/argo/stacked/color/argo-stacked-color.png)
+![bg right:50% 70%](https://kubernetes.io/images/favicon.png)
+
 ---
 # What is Crossplane?
 Crossplane is an open-source multi-cloud control plane that enables users to manage infrastructure as code and automate provisioning, scaling, and management of cloud resources. It provides a common way to provision and manage resources across different cloud providers and can be integrated with Kubernetes.
@@ -120,7 +111,7 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 
 ---
 # Providers
-Providers are Crossplane packages that bundle a set of Managed Resources and their respective controllers to allow Crossplane to provision the respective infrastructure resource.
+Providers bundle a set of Managed Resources and controllers to allow Crossplane to provision and manage the respective infrastructure resources.
 
 ![bg right fit](https://blog.codecentric.de/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Foutput%3Dformat%3Awebp%2FWAtrV4JRB64mnqOFNQKA&w=3840&q=75)
 
