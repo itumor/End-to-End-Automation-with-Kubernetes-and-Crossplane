@@ -20,9 +20,8 @@ size: 16:9
 - Experience: 13 years of experience in the computer software industry Worked with 5 companies 22 projects
 
 ---
-#### About Me
-
-![bg  contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/me2.png)
+##### About Me
+![bg  contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/me.png)
 
 ---
 
