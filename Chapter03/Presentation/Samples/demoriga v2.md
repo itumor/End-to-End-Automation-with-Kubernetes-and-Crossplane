@@ -30,11 +30,17 @@ size: 16:9
 ---
 
 # Problem
- The problem is to achieve **true GitOps** for both **infrastructure** and applications while minimizing the use of **multiple tools** and **languages** and reducing **complexity**. 
+ The problem is to achieve **true GitOps** for both **infrastructure** and **applications** while minimizing the use of **multiple tools** and **languages** and reducing **complexity**.
+
+ To have True GitOps you will face challenges:
+ * Multiple Tools
+ * Multiple Languages
+ * Complexity
 
 ---
 # solution
 - Kubernetes and Argo CD, along with Crossplane, are solutions that help to solve the problem statement by providing a more streamlined and automated approach to managing infrastructure and applications using GitOps principles.
+
 
 ----
 # Kubernetes
@@ -63,17 +69,18 @@ By combining these tools, it becomes possible to achieve true GitOps for both in
 ![bg right:50% 70%](https://kubernetes.io/images/favicon.png)
 
 ---
+# Solution Diagram  
+
+![bg contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Solution.png)
+
+---
 # What is Crossplane?
 Crossplane is an open-source multi-cloud control plane that enables users to manage infrastructure as code and automate provisioning, scaling, and management of cloud resources. It provides a common way to provision and manage resources across different cloud providers and can be integrated with Kubernetes.
 
 ![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
 
 ---
-# Solution Diagram  
 
-![bg contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Solution.png)
-
----
 # Why use Crossplane?
 
 - Crossplane allows you to manage cloud resources using the same tools and workflows that you use to manage your Kubernetes clusters.
