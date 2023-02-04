@@ -155,7 +155,7 @@ spec:
 # Managed Resources
 is Crossplane’s representation of a resource in an external system  most commonly a cloud. Managed Resources are opinionated, Crossplane Resource Model (XRM) compliant Kubernetes Custom Resources that are installed by a Crossplane provider.
 
-![bg right fit](https://freecontent.manning.com/wp-content/uploads/defining-infrastructure-declaratively-with-crossplane_05.png)
+![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Managed_Resources.png?raw=tru)
 
 ---
 ```yaml
