@@ -20,10 +20,14 @@ size: 16:9
 - Experience: 13 years of experience in the computer software industry Worked with 5 companies 22 projects
 
 ---
+
 # Introduction
 
-- What Why How Kubernetes?
-- What Why How GitOps?  
+- Problem
+- Solution
+- Kubernetes
+- Argo CD
+- Crossplane
 - What Why How Crossplane? 
 - Crossplane Concepts.
 - Demo 
@@ -33,95 +37,35 @@ size: 16:9
 
 ---
 
-# What Is Kubernetes? 
-* Kubernetes is an open-source container orchestration system for automating the deployment, scaling, and management of containerized applications.
-
-* It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF).
-
-* Kubernetes provides a platform-agnostic way to manage and deploy containerized applications, making it possible to run them on a variety of infrastructure, including on-premises, in the cloud, or in a hybrid environment.
-
-![bg left:10% 80%](https://kubernetes.io/images/favicon.png)
+# Problem
+ The problem is to achieve **true GitOps** for both **infrastructure** and applications while minimizing the use of **multiple tools** and **languages** and reducing **complexity**. 
 
 ---
-
-# Why use Kubernetes?
-
-- Scalability
-
-- High availability 
-
-- Self-healing 
-
-- Load balancing
-
-- Flexibility 
-
-- Automated rollouts and rollbacks
-
-- Reduced operational overhead 
-
-- Large and active community
-
-![bg left:10% 80%](https://kubernetes.io/images/favicon.png)
+# solution
+- Kubernetes and Argo CD, along with Crossplane, are solutions that help to solve the problem statement by providing a more streamlined and automated approach to managing infrastructure and applications using GitOps principles.
 
 ----
-# How Kubernetes works?
-Kubernetes works by using a master-slave architecture to manage containerized applications:
+# Kubernetes
 
-- The developer uses kubectl command line tool to interact with the Kubernetes master node, which controls worker nodes.
-- The worker nodes run the containerized application and communicate with the master node to ensure desired state is met.
-- Kubernetes automatically distributes incoming traffic, monitor the running containers, and performs self-healing.
+Kubernetes provides a platform for deploying, scaling, and managing containerized applications, making it easier to manage infrastructure as code.
 
 ![bg left:10% 80%](https://kubernetes.io/images/favicon.png)
 
 ---
+# Argo CD
 
-![bg fit](https://images.ctfassets.net/w1bd7cq683kz/5Ex6830HzBPU5h8Ou8xQAB/2c948105fc10094348203bec6c1eab04/Kubernetes_20architecture_20diagram.png)
+ Argo CD is a GitOps-based continuous delivery tool that automates the deployment of applications to Kubernetes clusters, helping to ensure that the desired state of the infrastructure is always in sync with the state described in Git.
 
----
-# What is GitOps?  
-- GitOps is a way of implementing Continuous Deployment for cloud native applications, it uses Git as a source of truth for declarative infrastructure and application code.
-
-- It uses a pipeline to automatically deploy changes and bring the system to the desired state, defined in a Git repository, and continuously monitors the cluster for drift.
-
-- GitOps also facilitates collaboration, traceability, and rollbacks by using version control in the Git repository.
-
-![bg left:10% 80%](https://www.almtoolbox.com/blog/wp-content/uploads//2022/03/gitops.png)
+![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/argo/stacked/color/argo-stacked-color.png)
 
 ---
-# Why use Gitops?
+# Crossplane
+ Crossplane provides a unified control plane that makes it easier to manage multiple cloud resources using GitOps principles, by allowing administrators to manage infrastructure as code.
 
-- Automation and Efficiency
-
-- Collaboration and traceability
-
-- Security 
-
-- Scalability 
-
-- Flexibility 
-
-- Reliability
-
-- Speed 
-
-- Cost-effective
-
-![bg left:10% 80%](https://www.almtoolbox.com/blog/wp-content/uploads//2022/03/gitops.png)
-
-----
-# How GitOps Works?
-- GitOps uses a Git repository to store the desired state of the system and a pipeline to continuously monitor and update the system to match that desired state.
-
-- The pipeline includes automated tests and security checks, and can monitor the cluster for drift and automatically correct it.
-
-- GitOps facilitates collaboration and traceability, and allows for easy rollbacks by using version control in the Git repository.
-
-![bg left:10% 80%](https://www.almtoolbox.com/blog/wp-content/uploads//2022/03/gitops.png)
+![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
 
 ---
-![bg fit ](https://www.cncf.io/wp-content/uploads/2022/08/image1-31.png)
-
+- By combining these tools, it becomes possible to achieve true GitOps for both infrastructure and applications, reducing complexity and minimizing the need to use multiple tools and languages.
 ---
 # What is Crossplane?
 Crossplane is an open-source multi-cloud control plane that enables users to manage infrastructure as code and automate provisioning, scaling, and management of cloud resources. It provides a common way to provision and manage resources across different cloud providers and can be integrated with Kubernetes.
