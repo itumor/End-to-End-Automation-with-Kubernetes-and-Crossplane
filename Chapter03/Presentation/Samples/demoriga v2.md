@@ -22,7 +22,7 @@ size: 16:9
 ---
 # About Me
 
-![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/me.png)
+![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/me2.png)
 
 ---
 
