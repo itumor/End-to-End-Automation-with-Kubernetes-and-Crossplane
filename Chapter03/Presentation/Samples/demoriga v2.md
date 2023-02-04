@@ -279,7 +279,7 @@ spec:
 
 ---
 # Demo
-
+![bg fit ](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/crossplane%20demo.png)
 
 
 ---
