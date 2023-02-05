@@ -282,9 +282,9 @@ spec:
     name: my-db-connection-details
 ```
 ---
-# How Composite Resources Works 
+
  
-![bg fit 50% ](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/How_Composite_Resources_Works.png)
+![bg fit ](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/How_Composite_Resources_Works.png?raw=true)
 
 ---
 # Demo
