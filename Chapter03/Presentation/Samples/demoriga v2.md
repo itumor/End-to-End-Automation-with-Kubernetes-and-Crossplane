@@ -180,7 +180,7 @@ spec:
 # Composite Resources
 Crossplane Composite Resources are opinionated Kubernetes Custom Resources that are composed of Managed Resources. We often call them XRs for short.
 
-![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Composite_Resources.png)
+![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Composite_Resources.png?raw=tru)
 
 ---
 #  Composite Resource Definition 
@@ -283,12 +283,13 @@ spec:
 ```
 ---
 # How Composite Resources Works 
-
-![bg fit 50% ](https://docs.crossplane.io/media/composition-how-it-works.svg)
+ 
+![bg fit 50% ](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/How_Composite_Resources_Works.png)
 
 ---
 # Demo
 ![bg fit ](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/crossplane_demo.png)
+
 
 
 ---
