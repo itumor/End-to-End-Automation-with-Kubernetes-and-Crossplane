@@ -293,7 +293,7 @@ spec:
 
 ---
 
-![bg](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Q&A.png?raw=true)
+![bg fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Q&A.png?raw=true)
 
 ---
 You Can Find Me https://www.linkedin.com/in/Ebrahim-Ramadan
