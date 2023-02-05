@@ -282,9 +282,8 @@ spec:
     name: my-db-connection-details
 ```
 ---
-
  
-![bg fit ](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/How_Composite_Resources_Works.png?raw=true)
+![bg fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/How_Composite_Resources_Works.png?raw=true)
 
 ---
 # Demo
@@ -293,7 +292,8 @@ spec:
 
 
 ---
-![bg fit ](https://www.michaelleestallard.com/wp-content/uploads/qa-760x406.jpg)
+
+![bg fit ](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Q&A.png?raw=true)
 
 ---
 You Can Find Me https://www.linkedin.com/in/Ebrahim-Ramadan
