@@ -83,13 +83,9 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 
 # Why use Crossplane?
 
-- Crossplane allows you to manage cloud resources using the same tools and workflows that you use to manage your Kubernetes clusters.
+![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/Why_Crossplane.png)
 
-- Crossplane enables users to provision and manage cloud resources from different providers using a common set of APIs and tools, reducing the complexity of multi-cloud deployments.
 
-- Crossplane enables users to define, compose, and manage reusable infrastructure as code, allowing for more efficient and consistent deployments.
-
-![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
 
 ---
 # How Crossplane works?
