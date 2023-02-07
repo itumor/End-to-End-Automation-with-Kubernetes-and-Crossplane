@@ -24,7 +24,7 @@ size: 16:9
   - Crossplane
 - Solution Diagram 
 - What Why How Crossplane? 
-- Crossplane Concepts.
+- Crossplane components overview.
 - Demo 
 - Q & A 
 ---
@@ -36,6 +36,19 @@ size: 16:9
  * Multiple Tools
  * Multiple Languages
  * Complexity
+
+---
+# Infrastructure Automation History
+
+Name | Tools | 
+-----|------|
+Manual | 
+Scripting | (Powershell , Bash ) 
+Configuration Management | (Puppet ,Chef ,Ansible)
+IAC | 
+Declarative | (CloudFormation ,Terraform) 
+Componentized |(CDK , Pulumi , CDKTF)
+Central control plane | (Crossplane) 
 
 ---
 # solution
@@ -83,8 +96,7 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 
 # Why use Crossplane?
 
-![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/Why_Crossplane.png)
-
+![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Why_Crossplane.png)
 
 
 ---
@@ -107,21 +119,24 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 #
 ![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/46e8007ac954926a642c37c70e0af13e06f24de7/Chapter03/Presentation/Samples/images/crossplane1.png)
 
-
 ---
-# Crossplane Concepts
-- Providers
-- Managed Resources (MR)
-- Composite Resources (XRs)
-- Composite Resource Definition (XRD)
-- Composite 
-- Composite Resource Claim (Claim)
-- How Composite Resources Works 
-
+# Crossplane components overview 
+Component | Abbreviation | Scope 
+-----|------|:-----:
+Provider | | cluster | 
+ProviderConfig | PC | cluster |
+Managed Resource | MR | cluster | 
+Composition | | cluster |
+Composite Resources| XR | cluster | 
+Composite Resource Definitions | XRD | cluster |
+Claims | XC | namespace | 
 
 ---
 # Providers
-Providers bundle a set of Managed Resources and controllers to allow Crossplane to provision and manage the respective infrastructure resources.
+Creates new Kubernetes Custom Resource Definitions for an external service.
+
+### ProviderConfig 
+Applies settings for a Provider.
 
 ![bg right:60% 80% fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Providers.png?raw=true)
 
@@ -149,7 +164,7 @@ spec:
 ```
 ---
 # Managed Resources
-is Crossplane’s representation of a resource in an external system  most commonly a cloud. Managed Resources are opinionated, Crossplane Resource Model (XRM) compliant Kubernetes Custom Resources that are installed by a Crossplane provider.
+A provider resource created and managed by Crossplane inside the Kubernetes cluster.
 
 ![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Managed_Resources.png?raw=tru)
 
@@ -172,15 +187,56 @@ spec:
     namespace: crossplane-system
     name: aws-rdspostgresql-conn
 ```
+
+---
+
+# Composition
+A template for creating multiple managed resources at once.
+
+---
+```yaml
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: example
+  labels:
+    crossplane.io/xrd: xpostgresqlinstances.database.example.org
+    provider: gcp
+spec:
+  writeConnectionSecretsToNamespace: crossplane-system
+  compositeTypeRef:
+    apiVersion: database.example.org/v1alpha1
+    kind: XPostgreSQLInstance
+  resources:
+  - name: cloudsqlinstance
+    base:
+      apiVersion: database.gcp.crossplane.io/v1beta1
+      kind: CloudSQLInstance
+      spec:
+        forProvider:
+          databaseVersion: POSTGRES_12
+          region: us-central1
+          settings:
+            tier: db-custom-1-3840
+            dataDiskType: PD_SSD
+            ipConfiguration:
+              ipv4Enabled: true
+              authorizedNetworks:
+                - value: "0.0.0.0/0"
+    patches:
+    - type: FromCompositeFieldPath
+      fromFieldPath: spec.parameters.storageGB
+      toFieldPath: spec.forProvider.settings.dataDiskSizeGb
+```
 ---
 # Composite Resources
-Crossplane Composite Resources are opinionated Kubernetes Custom Resources that are composed of Managed Resources. We often call them XRs for short.
+Uses a Composition template to create multiple managed resources as a single Kubernetes object.
 
 ![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Composite_Resources.png?raw=tru)
 
 ---
-#  Composite Resource Definition 
-Composite Resource Definitions (XRDs) are modelled on similar Kubernetes concepts - Custom Resources (CRs) and Custom Resource Definitions (CRDs).
+# Composite Resource Definitions
+Defines the API schema for Composite Resources and Claims
 
 ---
 ```YAML
@@ -219,48 +275,8 @@ spec:
 
 ```
 ---
-
-# Composition
-Composition in Crossplane refers to the process of composing multiple underlying resources into a higher-level abstraction
-
----
-```yaml
-apiVersion: apiextensions.crossplane.io/v1
-kind: Composition
-metadata:
-  name: example
-  labels:
-    crossplane.io/xrd: xpostgresqlinstances.database.example.org
-    provider: gcp
-spec:
-  writeConnectionSecretsToNamespace: crossplane-system
-  compositeTypeRef:
-    apiVersion: database.example.org/v1alpha1
-    kind: XPostgreSQLInstance
-  resources:
-  - name: cloudsqlinstance
-    base:
-      apiVersion: database.gcp.crossplane.io/v1beta1
-      kind: CloudSQLInstance
-      spec:
-        forProvider:
-          databaseVersion: POSTGRES_12
-          region: us-central1
-          settings:
-            tier: db-custom-1-3840
-            dataDiskType: PD_SSD
-            ipConfiguration:
-              ipv4Enabled: true
-              authorizedNetworks:
-                - value: "0.0.0.0/0"
-    patches:
-    - type: FromCompositeFieldPath
-      fromFieldPath: spec.parameters.storageGB
-      toFieldPath: spec.forProvider.settings.dataDiskSizeGb
-```
----
-# Composite Resource Claim
-A “Composite Resource Claim”, “XRC”, or just “a claim” is also an API type defined using Crossplane. Each type of claim corresponds to a type of composite resource, and the pair have nearly identical schemas. Like composite resources, the type of a claim is arbitrary.
+# Claims
+Like a Composite Resource Uses a Composition template to create multiple managed resources as a single Kubernetes object., but namespace scoped.
 
 ---
 ```yaml
