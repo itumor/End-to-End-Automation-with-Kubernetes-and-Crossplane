@@ -51,12 +51,11 @@ Componentized |(CDK , Pulumi , CDKTF)
 Central control plane | (Crossplane) 
 
 ---
-# Solution Diagram  
 
-![bg contain](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Solution.png)
-
+![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/GitOps.png)
 
 ---
+
 # solution
 - Kubernetes and Argo CD, along with Crossplane, are solutions that help to solve the problem statement by providing a more streamlined and automated approach to managing infrastructure and applications using GitOps principles.
 
