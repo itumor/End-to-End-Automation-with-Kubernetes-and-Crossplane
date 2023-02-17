@@ -57,7 +57,7 @@ Central control plane | (Crossplane)
 ---
 
 # solution
-- Kubernetes and Argo CD, along with Crossplane, are solutions that help to solve the problem statement by providing a more streamlined and automated approach to managing infrastructure and applications using GitOps principles.
+- **Kubernetes** and **Argo CD**, along with **Crossplane**, are **solutions** that help to solve the problem statement by **providing** a more streamlined and **automated** approach to **managing infrastructure and applications** using **GitOps** principles.
 
 
 ----
@@ -103,22 +103,6 @@ Crossplane is an open-source multi-cloud control plane that enables users to man
 
 ![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/Why_Crossplane.png)
 
-
----
-# How Crossplane works?
-- Crossplane uses a Kubernetes-native API to provision and manage cloud resources, making it easy to integrate with existing Kubernetes workflows and tools.
-
-- Crossplane uses a Custom Resource Definition (CRD) to define the desired state of cloud resources, which can be versioned and tracked in Git.
-
-![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
-
----
-# How Crossplane works?
-- Crossplane uses controllers that watch for changes to the CRDs and automatically provision and manage the resources to match the desired state.
-
-- Crossplane can be integrated with other Kubernetes tools such as Helm, Kustomize, and Kubernetes Operators to provide a powerful and flexible multi-cloud infrastructure management solution.
-
-![bg left:10% 80%](https://cncf-branding.netlify.app/img/projects/crossplane/icon/color/crossplane-icon-color.png)
 
 ---
 #
@@ -318,5 +302,3 @@ You Can Find Me https://www.linkedin.com/in/Ebrahim-Ramadan
 ![bg fit ](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/thank_you.png?raw=true)
 
 ![bg fit 80% ](https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.linkedin.com%2Fin%2FEbrahim-Ramadan%2F&chs=180x180&choe=UTF-8&chld=L|2)
-
-
