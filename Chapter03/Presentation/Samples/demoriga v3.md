@@ -16,27 +16,14 @@ size: 16:9
 ---
 
 # Agenda
-
+- Infrastructure Automation History
+- what is GitOps?
 - Problem
-- Solution
-  - Kubernetes
-  - Argo CD
-  - Crossplane
-- Solution Diagram 
+- Solution 
 - What Why How Crossplane? 
 - Crossplane components overview.
 - Demo 
-- Q & A 
----
-
-# Problem
- The problem is to achieve **true GitOps** for both **infrastructure** and **applications** while minimizing the use of **multiple tools** and **languages** and reducing **complexity**.
-
- To have True GitOps you will face challenges:
- * Multiple Tools
- * Multiple Languages
- * Complexity
-
+- Q & A
 ---
 # Infrastructure Automation History
 
@@ -53,6 +40,15 @@ Central control plane | (Crossplane)
 ---
 
 ![bg fit](https://raw.githubusercontent.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/main/Chapter03/Diagram/Samples/GitOps.png)
+
+---
+# Problem
+ The problem is to achieve **true GitOps** for both **infrastructure** and **applications** while minimizing the use of **multiple tools** and **languages** and reducing **complexity**.
+
+ To have True GitOps you will face challenges:
+ * Multiple Tools
+ * Multiple Languages
+ * Complexity
 
 ---
 
@@ -223,6 +219,21 @@ Uses a Composition template to create multiple managed resources as a single Kub
 
 ![bg right fit](https://github.com/itumor/End-to-End-Automation-with-Kubernetes-and-Crossplane/blob/main/Chapter03/Diagram/Samples/Composite_Resources.png?raw=tru)
 
+---
+```YAML
+apiVersion: database.example.org/v1alpha1
+kind: XPostgreSQLInstance
+metadata:
+  name: my-db
+spec:
+  parameters:
+    storageGB: 20
+  compositionRef:
+    name: production
+  writeConnectionSecretToRef:
+    namespace: crossplane-system
+    name: my-db-connection-details
+```
 ---
 # Composite Resource Definitions
 Defines the API schema for Composite Resources and Claims
